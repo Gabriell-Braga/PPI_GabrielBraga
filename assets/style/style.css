@@ -1,0 +1,241 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+ol,
+p,
+a,
+label,
+input,
+span {
+  font-family: "Source Sans Pro";
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 600;
+}
+
+p{
+  font-size: 1.1em;
+  font-weight: 200;
+}
+
+.buttons{
+  margin-top: 10%;
+  display: flex;
+}
+
+.buttons .button:not(:last-child){
+  margin-right: 5%;
+}
+
+.button {
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  background: #0D73BB;
+  font-size: 0.8em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button:hover{
+  color: #0D73BB;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.button.rounded{
+  border-radius: 30px;
+}
+
+.button.no-bg{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px white solid;
+}
+
+.button.no-bg:hover{
+  color: #0D73BB;
+  background: white;
+  transition: 0.3s ease;
+}
+
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ a {
+  text-decoration: none;
+ }
+ li {
+  list-style: none;
+ }
+
+/* IMG HOME */
+.banner-menu{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0)), url("../img/home.jpg");
+  height: 780px;
+  background-size: 130%;
+  background-position: left bottom;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+  display: none;
+ } 
+ /*HAMBURGER MENU*/
+ .hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+ }
+ /* APPLYING MEDIA QUERIES */
+ @media (max-width: 768px) {
+ .menu { 
+  display:none;
+  position: absolute;
+  background-color:teal;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 16px 0;
+ }
+ .menu li:hover {
+  display: inline-block;
+  background-color:#4c9e9e;
+  transition: 0.3s ease;
+ }
+ .menu li + li {
+  margin-top: 12px;
+ }
+ input[type=checkbox]:checked ~ .menu{
+  display: block;
+ }
+ .hamburger {
+  display: block;
+ }
+ .dropdown {
+  left: 50%;
+  top: 30px;
+  transform: translateX(35%);
+ }
+ .dropdown li:hover {
+  background-color: #4c9e9e;
+ }
+ }
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+ }
+ .nav-links a {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+ }
+
+ .nav-links a:hover, .nav-links a.select{
+  color: #57AEEC;
+ }
+ /* NAVBAR MENU */
+ .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+ }
+ .menu li:hover {
+  border-radius: 5px;
+  transition: 0.3s ease;
+ }
+ .menu li {
+  padding: 5px 14px;
+ }
+ /* DROPDOWN MENU */
+ .services {
+  position: relative; 
+ }
+ .dropdown {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 30px;
+ }
+ .dropdown li + li {
+  margin-top: 10px;
+ }
+ .dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+ }
+ .dropdown li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+ }
+
+ .dropdown li:hover a{
+  color: #57AEEC;
+ }
+ .services:hover .dropdown, .dropdown:hover, .dropdown .li:hover{
+  display: block;
+  transition: 0.3s ease;
+}
+
+.dropdown a{
+  color: white;
+}
+
+.banner{
+  height: 80%;
+  width: 100%;
+  justify-content: left;
+  display: flex;
+}
+
+.left-banner, .right-banner{
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.left-banner .content, .right-banner .content{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+}
+
+.left-banner{
+  justify-content: left;
+  text-align: left;
+}
+
+.right-banner{
+  justify-content: right;
+  text-align: right;
+}
+
+.left-banner .content{
+  padding-right: 10%;
+}
+
+.white{
+  color: white;
+}

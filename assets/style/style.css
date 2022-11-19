@@ -1,10 +1,21 @@
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  
+  footer .content-f .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
 @media (max-width: 452px) 
   {
     body .banner-menu{
       height: 1100px !important;
     }
 
-    .buttons{
+    .banner-menu  .buttons{
       margin-bottom: 350px !important;
     }
   }
@@ -12,26 +23,40 @@
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 912px) 
   {
+    footer .content-f .box{
+      width: 50%;
+    }
+
+    .content-f .right{
+      margin-top: 40px;
+    }
+
     .banner h1 {
       font-size: 4em !important;
       font-weight: 600;
     }
 
-    .banner .left-banner{
+    .banner .left-banner, .banner .right-banner{
       width: 100%;
     }
 
-    .banner .left-banner .content{
+    .banner .left-banner .content, .banner .right-banner .content{
       text-align: center;
       padding: 50px;
+      margin-top: 70px;
       transform: translateY(-45%);
+    }
+
+    .banner-secondary .banner .right-banner .content{
+      padding: 0;
+      text-align: center;
     }
 
     .navbar {
       z-index: 4;
     }
 
-    .banner-menu .navbar .menu { 
+    body .navbar .menu { 
       display: none;
       position: absolute;
       z-index: 5;
@@ -39,8 +64,9 @@
       right: 0;
       left: 0;
       text-align: center;
-      margin-top: 15px;
+      margin-top: 20px;
       padding: 16px 0;
+      height: 100%;
     }
 
     .menu li:hover {
@@ -53,6 +79,15 @@
 
     .menu li + li {
       margin-top: 12px;
+    }
+
+    body:has(input[type=checkbox]:checked ~ .menu){
+      overflow: hidden;
+    }
+
+    .navbar:has(input[type=checkbox]:checked ~ .menu){
+      height: 100%;
+      align-items: unset;
     }
 
     input[type=checkbox]:checked ~ .menu{
@@ -80,9 +115,19 @@
       background-position: bottom center;
     }
 
+    body .banner-secondary{
+      height: 900px;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+
     .buttons{
-      margin-bottom: 200px;
       justify-content: center;
+    }
+
+    .banner-menu .buttons{
+      margin-bottom: 200px;
     }
 
     body .button {
@@ -90,22 +135,37 @@
       font-size: 0.7em;
       font-weight: 600;
     }
+
+    body .section{
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 8%;
+      margin-right: 8%;
+    }
+
+    .navbar .dropdown{
+      top: 200px;
+    }
+
+    body .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
   }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-ul,
-ol,
-p,
-a,
-label,
-input,
-span {
+  @media (min-width: 913px) 
+  {
+    .banner.right .buttons{
+      justify-content: flex-end;
+    }
+
+    .banner.right .content p{
+      padding-left: 150px;
+    }
+  }
+
+* {
   font-family: "Source Sans Pro";
 }
 
@@ -160,6 +220,17 @@ p{
   transition: 0.3s ease;
 }
 
+.button.no-bg.blue{
+  border: 1px #0D73BB solid;
+  color: #0D73BB;
+}
+
+.button.no-bg.blue:hover{
+  color: white;
+  background: #0D73BB;
+  transition: 0.3s ease;
+}
+
 /* UTILITIES */
 * {
   margin: 0;
@@ -182,8 +253,8 @@ p{
 }
 
 .banner-secondary{
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url("../img/secondary.png");
-  height: 780px;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url("../img/secondary.png");
+  height: 680px;
   background-size: 130%;
   background-position: right center;
   background-attachment: fixed;
@@ -209,6 +280,10 @@ input[type=checkbox]{
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
  }
  .nav-links a {
   color: white;
@@ -247,10 +322,10 @@ input[type=checkbox]{
  .dropdown {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1em 0;
-  position: absolute; /*WITH RESPECT TO PARENT*/
+  position: fixed; /*WITH RESPECT TO PARENT*/
   display: none;
   border-radius: 8px;
-  top: 30px;
+  top: 60px;
  }
  .dropdown li + li {
   margin-top: 10px;
@@ -280,6 +355,17 @@ input[type=checkbox]{
   height: 80%;
   width: 100%;
   justify-content: left;
+  display: flex;
+}
+
+body .banner-secondary .banner{
+  height: 100%;
+}
+
+.banner.right{
+  height: 80%;
+  width: 100%;
+  justify-content: right;
   display: flex;
 }
 
@@ -333,4 +419,135 @@ input[type=checkbox]{
 
 .section p{
   margin-bottom: 30px;
+}
+
+.justify{
+  text-align: justify;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {
+  margin: 0 -5px;
+  margin-top: 50px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding-bottom: 24px;
+}
+
+.card-image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.card-image img{
+  width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+.card h2{
+  font-size: 22px;
+}
+
+.card p{
+  font-size: 14px;
+}
+
+footer{
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: black;
+}
+
+footer .content-f{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .content-f p,a{
+  color: #fff;
+}
+
+footer .content-f .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+
+footer .content-f .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+
+footer .content-f p{
+  text-align: justify;
+}
+
+footer .content-f .lower .topic{
+  margin: 24px 0 5px 0;
+}
+
+footer .content-f .lower i{
+  padding-right: 16px;
+}
+
+footer .content-f .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+
+.content-f .media-icons a:hover{
+  border-color: #0D73BB;
+}
+
+footer .bottom{
+  width: 100%;
+  text-align: center;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+
+footer .bottom a{
+  color: #0D73BB;
+}
+
+footer a{
+  transition: all 0.3s ease;
+}
+
+footer a:hover{
+  color: #0D73BB;
 }

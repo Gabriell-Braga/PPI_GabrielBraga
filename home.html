@@ -4,41 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prefeitura de BH</title>
+    <title>Esportes e Lazer</title>
     <link
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/style/style.css" />
   </head>
   <body>
-    <div class="banner-menu">
-      <nav class="navbar">
-        <div class="logo">
-          <a href="home.html"><img height="50" src="assets/img/logo.png" /></a>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="home.html"><img height="50" src="assets/img/logo.png" /></a>
+      </div>
+      <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+          <li><a class="select" href="/">Home</a></li>
+          <li><a href="/">Atividades</a></li>
+          <li class="services">
+            <a>Programas</a>
+            <ul class="dropdown">
+              <li><a href="/">Dropdown 1 </a></li>
+              <li><a href="/">Dropdown 2</a></li>
+              <li><a href="/">Dropdown 2</a></li>
+              <li><a href="/">Dropdown 3</a></li>
+              <li><a href="/">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="/">Contato</a></li>
+          <li><a href="/">Sobre Nós</a></li>
         </div>
-        <ul class="nav-links">
-          <input type="checkbox" id="checkbox_toggle" />
-          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-          <div class="menu">
-            <li><a class="select" href="/">Home</a></li>
-            <li><a href="/">Atividades</a></li>
-            <li class="services">
-              <a>Programas</a>
-              <ul class="dropdown">
-                <li><a href="/">Dropdown 1 </a></li>
-                <li><a href="/">Dropdown 2</a></li>
-                <li><a href="/">Dropdown 2</a></li>
-                <li><a href="/">Dropdown 3</a></li>
-                <li><a href="/">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="/">Contato</a></li>
-            <li><a href="/">Sobre Nós</a></li>
-          </div>
-        </ul>
-      </nav>
+      </ul>
+    </nav>
+    <div class="banner-menu">
       <div class="banner">
         <div class="left-banner white">
           <div class="content">
@@ -60,20 +65,20 @@
     </div>
     <div class="section">
       <h2>O SMEL</h2>
-      <p>
+      <p class="justify">
         A Secretaria Municipal de Esporte e Lazer (SMEL) se dedica à
         implementação e desenvolvimento de projetos e programas esportivos e de
         lazer dirigidos à população de Belo Horizonte, à realização de eventos
         próprios e ao apoio a eventos de terceiros, com base nos preceitos da
         intersetorialidade, da participação popular e da inclusão social.
       </p>
-      <p>
+      <p class="justify">
         Por meio de seus programas permanentes, a SMEL atende, direta e
         indiretamente, mais de 100 mil pessoas – em núcleos próprios, escolas,
         pistas de caminhada e praças da cidade, em instituições de longa
         permanência (asilos), em ruas de lazer e eventos.
       </p>
-      <p>
+      <p class="justify">
         A SMEL busca integrar suas ações com as áreas de cultura, saúde,
         educação, abastecimento e assistência social, garantindo o acesso da
         população aos bens e serviços, em especial, das camadas menos
@@ -81,12 +86,121 @@
       </p>
     </div>
     <div class="banner-secondary">
-      <div class="banner">
-        <div class="left-banner white">
+      <div class="banner right">
+        <div class="right-banner white">
           <div class="content">
+            <h1>ESTUDANTES NO ESPORTE</h1>
+            <p>
+              Os Jogos Escolares de Belo Horizonte são realizados anualmente com
+              a participação de estabelecimentos das redes municipal, estadual e
+              particular de ensino. Com 24 modalidades, a competição reúne
+              estudantes-atletas com idade entre 12 e 17 anos.
+            </p>
+            <div class="buttons">
+              <button class="button rounded no-bg">VEJA MAIS</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="section">
+      <h2>PROGRAMAS</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card-image">
+            <img src="assets/img/vida-ativa.png" alt="" />
+          </div>
+          <div class="card">
+            <h2>Vida Ativa</h2>
+            <p>
+              Realizado pela Prefeitura de Belo Horizonte por meio da Secretaria
+              Municipal de Esportes e Lazer, o Vida Ativa promove atividades
+              físicas, de lazer e de socialização à população com idade superior
+              a 50 anos.
+            </p>
+            <a class="button rounded no-bg blue">VEJA MAIS</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card-image">
+            <img src="assets/img/caminhar.png" alt="" />
+          </div>
+          <div class="card">
+            <h2>Caminhar</h2>
+            <p>
+              Realizado pela Prefeitura de Belo Horizonte por meio da Secretaria
+              Municipal de Esportes e Lazer, o Vida Ativa promove atividades
+              físicas, de lazer e de socialização à população com idade superior
+              a 50 anos.
+            </p>
+            <a class="button rounded no-bg blue">VEJA MAIS</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card-image">
+            <img src="assets/img/superar.png" alt="" />
+          </div>
+          <div class="card">
+            <h2>Superar</h2>
+            <p>
+              Realizado pela Prefeitura de Belo Horizonte por meio da Secretaria
+              Municipal de Esportes e Lazer, o Vida Ativa promove atividades
+              físicas, de lazer e de socialização à população com idade superior
+              a 50 anos.
+            </p>
+            <a class="button rounded no-bg blue">VEJA MAIS</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card-image">
+            <img src="assets/img/ee.png" alt="" />
+          </div>
+          <div class="card">
+            <h2>Esporte Esperança</h2>
+            <p>
+              Realizado pela Prefeitura de Belo Horizonte por meio da Secretaria
+              Municipal de Esportes e Lazer, o Vida Ativa promove atividades
+              físicas, de lazer e de socialização à população com idade superior
+              a 50 anos.
+            </p>
+            <a class="button rounded no-bg blue">VEJA MAIS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="content-f">
+        <div class="left box">
+          <div class="upper">
+            <div class="topic">Sobre Nós</div>
+            <p>
+              A Secretaria Municipal de Esportes e Lazer atua na elaboração e
+              execução de programas e projetos dentro dos preceitos de estímulo
+              à prática de atividades físicas e de convívio social.
+            </p>
+          </div>
+          <div class="lower">
+            <div class="topic">Contato</div>
+            <div class="phone">
+              <a target="_blank" href="tel:5531973065499"><i class="fas fa-phone-volume"></i>31 97306-5499</a>
+            </div>
+            <div class="email">
+              <a target="_blank" href="mailto:gabriel.braga.andrade@ufu.br"><i class="fas fa-envelope"></i>gabriel.braga.andrade@ufu.br</a>
+            </div>
+          </div>
+        </div>
+        <div class="right box">
+          <div class="topic">Redes Sociais</div>
+          <div class="media-icons">
+            <a target="_blank" href="https://github.com/Gabriell-Braga"><i class="fab fa-github"></i></a>
+            <a target="_blank" href="https://www.instagram.com/gbraga.exe/"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/gabriel-braga-642ba2182/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Copyright © 2022 <a href="#">Gabriel Braga</a> Todos direitos reservados</p>
+      </div>
+    </footer>
   </body>
 </html>

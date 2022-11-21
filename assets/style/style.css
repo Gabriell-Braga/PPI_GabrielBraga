@@ -21,6 +21,84 @@
 
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 912px) {
+  .pr-table {
+    display: block;
+    width: 100%;
+  }
+  
+  .table-wrapper:before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+
+  .pr-table thead,
+  .pr-table tbody,
+  .pr-table thead th {
+    display: block;
+  }
+
+  .pr-table thead th:last-child {
+    border-bottom: none;
+  }
+
+  .pr-table thead {
+    float: left;
+  }
+
+  .pr-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+
+  .pr-table td,
+  .pr-table th {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+
+  .pr-table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+
+  .pr-table tbody tr {
+    display: table-cell;
+  }
+
+  .pr-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+
+  .pr-table tr:nth-child(even) {
+    background: transparent;
+  }
+
+  .pr-table tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
+  }
+
+  .pr-table tr td:nth-child(even) {
+    border-right: 1px solid #e6e4e4;
+  }
+
+  .pr-table tbody td {
+    display: block;
+    text-align: center;
+  }
+
   footer .content-f .box {
     width: 50%;
   }
@@ -174,6 +252,10 @@
 }
 
 @media (min-width: 913px) {
+  .superar-banner {
+    background-size: 100%;
+  }
+
   .banner.right .buttons {
     justify-content: flex-end;
   }
@@ -293,15 +375,63 @@ li {
 }
 
 .contato-banner {
-  background-size: 130%;
+  background-position: right center;
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.3)
     ),
     url("../img/contato.jpg");
+}
+
+.sobre-banner {
   background-position: right center;
-  padding-top: 150px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../img/sobre.jpg");
+}
+
+.caminhar-banner {
+  background-position: center center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../img/caminhar.jpg");
+}
+
+.ee-banner {
+  background-position: center center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../img/esporte-esperança.jpg");
+}
+
+.superar-banner {
+  background-position: center center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../img/superar.jpg");
+}
+
+.vida-ativa-banner {
+  background-position: center center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../img/vida-ativa.jpg");
 }
 
 .banner-menu {
@@ -317,6 +447,8 @@ li {
 
 .banner-pages {
   height: 550px;
+  padding-top: 150px;
+  background-size: 130%;
 }
 
 .banner-pages .content {
@@ -347,6 +479,7 @@ li {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 .nav-links a {
   color: white;
@@ -643,7 +776,7 @@ form {
   border-radius: 10px;
 }
 
-form h2{
+form h2 {
   text-align: center;
 }
 
@@ -755,6 +888,73 @@ form hr {
   padding: 0;
 }
 
-form .label{
+form .label {
   margin: 10px 0 25px 0;
+}
+
+form .button:hover {
+  border: 1px solid #0d73bb;
+}
+
+.map {
+  width: 100%;
+  border: 0;
+  height: 400px;
+}
+
+.left {
+  text-align: left;
+}
+
+.fas.icon-sobre {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.column.sobre p {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.table-wrapper {
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+.pr-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+.pr-table td,
+.pr-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.pr-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.pr-table thead th:not(:first-child) {
+  color: #ffffff;
+  background: #0d73bb;
+}
+
+.pr-table thead th {
+  color: #ffffff;
+  background: #324960;
+}
+
+.pr-table tr:nth-child(even) {
+  background: #f8f8f8;
 }

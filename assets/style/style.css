@@ -773,7 +773,7 @@ footer a:hover {
   color: #0d73bb;
 }
 
-form {
+form, .section.shadow {
   margin: 50px;
   text-align: left;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -961,4 +961,30 @@ form .button:hover {
 
 .pr-table tr:nth-child(even) {
   background: #f8f8f8;
+}
+
+form .danger small{
+  margin-bottom: 20px;
+}
+
+.danger small{
+  color: red;
+  display: block;
+}
+
+.danger input, .danger textarea{
+  border-color: red;
+  margin: 0;
+}
+
+.danger{
+  margin-bottom: 15px;
+}
+
+form small{
+  display: none;
+}
+
+.hide{
+  display: none;
 }

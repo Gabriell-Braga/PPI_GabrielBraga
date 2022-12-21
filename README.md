@@ -12,9 +12,9 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [ ] Aplicar JS
+- [X] Aplicar JS
 - [ ] Melhorar CSS
-- [ ] Melhorar HTML
+- [X] Melhorar HTML
 
 ## 💻 Link do Site
 

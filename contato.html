@@ -54,22 +54,30 @@
     <div class="section">
       <form>
         <h2>Entre em Contato</h2>
-        <input
-          name="nome"
-          type="text"
-          class="feedback-input"
-          placeholder="Nome"
-        />
-        <input
-          name="email"
-          type="text"
-          class="feedback-input"
-          placeholder="Email"
-        />
+        <div>
+          <input
+            name="nome"
+            id="nome"
+            type="text"
+            class="feedback-input"
+            placeholder="Nome"
+          />
+          <small>O Campo Nome está vazio</small>
+        </div>
+        <div>
+          <input
+            name="email"
+            id="email"
+            type="text"
+            class="feedback-input"
+            placeholder="Email"
+          />
+          <small>O Email não foi preenchido corretamente</small>
+        </div>
         <div class="label">
           <label class="container"
             >Mora em Belo Horizonte?
-            <input type="checkbox" name="morador"/>
+            <input id="morador" type="checkbox" name="morador"/>
             <span class="checkmark check"></span>
           </label>
         </div>
@@ -90,13 +98,45 @@
             <input id="x" type="radio" name="sexo" value="x" />
             <span class="checkmark radio"></span>
           </label>
+          <small>Este Campo deve ser Preenchido</small>
         </div>
-        <input
-          type="submit"
-          value="ENVIAR"
-          class="button rounded button-full-width"
-        />
+        <div>
+          <textarea class="feedback-input" placeholder="Mensagem" name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+          <small>A Mensagem não pode estar Vazia</small>
+        </div>
+            <button type="button" id="verifica" onclick="verifica()" class="button blue rounded button-full-width no-bg">VERIFICAR</button>
       </form>
+    </div>
+    <div id="dados" class="section shadow dados hide">
+      <div class="row">
+        <div class="column">
+          <h1>Nome</h1>
+          <p id="nome-dado"></p>
+        </div>
+        <div class="column">
+          <h1>Email</h1>
+          <p id="email-dado"></p>
+        </div>
+        <div class="column">
+          <h1>Mora em Belo Horizonte?</h1>
+          <p id="mora-dado"></p>
+        </div>
+        <div class="column">
+          <h1>Gênero</h1>
+          <p id="genero-dado"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h1>Mensagem</h1>
+          <p id="mensagem-dado"></p>
+        </div>
+      </div>
+      <input
+            type="submit"
+            value="ENVIAR"
+            class="button rounded button-full-width"
+          />
     </div>
     <footer>
       <div class="content-f">
@@ -148,5 +188,6 @@
         </p>
       </div>
     </footer>
+    <script src="assets/js/verifica.js"></script>
   </body>
 </html>

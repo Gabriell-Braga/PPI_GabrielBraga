@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="section">
-      <form>
+      <form id="form">
         <h2>Entre em Contato</h2>
         <div>
           <input
@@ -95,7 +95,7 @@
           </label>
           <label class="container"
             >Prefiro não dizer
-            <input id="x" type="radio" name="sexo" value="x" />
+            <input id="x" type="radio" name="sexo" value="nao" />
             <span class="checkmark radio"></span>
           </label>
           <small>Este Campo deve ser Preenchido</small>
@@ -108,35 +108,57 @@
       </form>
     </div>
     <div id="dados" class="section shadow dados hide">
+      <h1>Dados</h1>
       <div class="row">
         <div class="column">
-          <h1>Nome</h1>
+          <h3>Nome</h3>
           <p id="nome-dado"></p>
         </div>
         <div class="column">
-          <h1>Email</h1>
+          <h3>Email</h3>
           <p id="email-dado"></p>
         </div>
         <div class="column">
-          <h1>Mora em Belo Horizonte?</h1>
+          <h3>Mora em Belo Horizonte?</h3>
           <p id="mora-dado"></p>
         </div>
         <div class="column">
-          <h1>Gênero</h1>
+          <h3>Gênero</h3>
           <p id="genero-dado"></p>
         </div>
       </div>
       <div class="row">
         <div class="column">
-          <h1>Mensagem</h1>
+          <h3>Mensagem</h3>
           <p id="mensagem-dado"></p>
         </div>
       </div>
-      <input
-            type="submit"
+      <div class="row">
+        <div class="column-33">
+          <input
+            id="limpar"
+            type="button"
+            value="LIMPAR"
+            class="button rounded button-full-width"
+          />
+        </div>
+        <div class="column-33">
+          <input
+            id="editar"
+            type="button"
+            value="EDITAR"
+            class="button rounded button-full-width no-bg blue"
+          />
+        </div>
+        <div class="column-33">
+          <input
+            id="enviar"
+            type="button"
             value="ENVIAR"
             class="button rounded button-full-width"
           />
+        </div>
+      </div>
     </div>
     <footer>
       <div class="content-f">

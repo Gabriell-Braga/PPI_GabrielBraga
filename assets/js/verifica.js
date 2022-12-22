@@ -10,21 +10,8 @@ var scrollY = 0;
 var distance = 40;
 
 function autoScrollTo(el) {
-	var currentY = window.pageYOffset;
-	var targetY = document.getElementById(el).offsetTop;
-	var bodyHeight = document.body.offsetHeight;
-	var yPos = currentY + window.innerHeight;
-	var animator = setTimeout('autoScrollTo(\''+el+'\')', 10);
-	if(yPos > bodyHeight){
-		clearTimeout(animator);
-	} else {
-		if(currentY < targetY-distance){
-		    scrollY = currentY+distance;
-		    window.scroll(0, scrollY);
-	    } else {
-		    clearTimeout(animator);
-	    }
-	}
+	var element = document.querySelector("#"+el);
+    element.scrollIntoView({ behavior: 'smooth', block: 'end'});
 }
 
 document.getElementById("verifica").onclick = function() {verifica()};
@@ -79,8 +66,59 @@ function verifica(){
         }else{
             document.getElementById('mora-dado').innerHTML = "Não";
         }
+
+        nome.readOnly = true;
+        email.readOnly = true;
+        mensagem.readOnly = true;
+        h.disabled = true;
+        m.disabled = true;
+        x.disabled = true;
+        document.getElementById('morador').disabled = true;
+
         dados.classList.remove("hide");
         autoScrollTo('dados');
     }
 
+}
+
+function libera(){
+    var email = document.getElementById('email');
+    var nome = document.getElementById('nome');
+    var mensagem = document.getElementById('mensagem');
+    var h = document.getElementById('h');
+    var m = document.getElementById('m');
+    var x = document.getElementById('x');
+    var dados = document.getElementById('dados');
+
+    nome.readOnly = false;
+    email.readOnly = false;
+    mensagem.readOnly = false;
+    h.disabled = false;
+    m.disabled = false;
+    x.disabled = false;
+    document.getElementById('morador').disabled = false;
+
+    dados.classList.add("hide");
+}
+
+document.getElementById("limpar").onclick = function() {limpa()};
+
+document.getElementById("editar").onclick = function() {edita()};
+
+document.getElementById("enviar").onclick = function() {envia()};
+
+function limpa(){
+    libera();
+    document.getElementById("form").reset();
+    autoScrollTo('form');
+}
+
+function edita(){
+    libera();
+    autoScrollTo('form');
+}
+
+function envia(){
+    libera();
+    document.getElementById("form").submit();
 }

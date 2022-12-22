@@ -25,6 +25,10 @@
 
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 912px) {
+  .dados{
+    padding: 50px !important;
+  }
+
   .pr-table {
     display: block;
     width: 100%;
@@ -243,7 +247,8 @@
   }
 
   body .column,
-  body .column-50 {
+  body .column-50,
+  body .column-33 {
     width: 100%;
     display: block;
     margin-bottom: 20px;
@@ -641,6 +646,12 @@ body .banner-secondary .banner {
   padding: 0 10px;
 }
 
+.column-33 {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
 .row {
   margin: 0 -5px;
   margin-top: 50px;
@@ -987,4 +998,9 @@ form small{
 
 .hide{
   display: none;
+}
+
+form input:read-only, form textarea:read-only, form label:has(> input:disabled) {
+  cursor: not-allowed;
+  pointer-events: all !important;
 }

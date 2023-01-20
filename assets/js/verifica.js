@@ -6,14 +6,6 @@ function validateEmail(email){
         );
 };
 
-var scrollY = 0;
-var distance = 40;
-
-function autoScrollTo(el) {
-	var element = document.querySelector("#"+el);
-    element.scrollIntoView({ behavior: 'smooth', block: 'end'});
-}
-
 document.getElementById("verifica").onclick = function() {verifica()};
 
 function verifica(){
@@ -75,8 +67,7 @@ function verifica(){
         x.disabled = true;
         document.getElementById('morador').disabled = true;
 
-        dados.classList.remove("hide");
-        autoScrollTo('dados');
+        document.querySelector('.modal').classList.toggle('open');
     }
 
 }
@@ -97,8 +88,6 @@ function libera(){
     m.disabled = false;
     x.disabled = false;
     document.getElementById('morador').disabled = false;
-
-    dados.classList.add("hide");
 }
 
 document.getElementById("limpar").onclick = function() {limpa()};
@@ -110,15 +99,16 @@ document.getElementById("enviar").onclick = function() {envia()};
 function limpa(){
     libera();
     document.getElementById("form").reset();
-    autoScrollTo('form');
+    document.querySelector('.modal').classList.toggle('open');
 }
 
 function edita(){
     libera();
-    autoScrollTo('form');
+    document.querySelector('.modal').classList.toggle('open');
 }
 
 function envia(){
     libera();
+    document.querySelector('.modal').classList.toggle('open')
     document.getElementById("form").submit();
 }

@@ -33,7 +33,9 @@
               <li><a href="programas/caminhar.html">Caminhar</a></li>
               <li><a href="programas/vida-ativa.html">Vida Ativa</a></li>
               <li><a href="programas/superar.html">Superar</a></li>
-              <li><a href="programas/esporte-esperança.html">Esporte Esperança</a></li>
+              <li>
+                <a href="programas/esporte-esperança.html">Esporte Esperança</a>
+              </li>
             </ul>
           </li>
           <li><a class="select" href="contato.html">Contato</a></li>
@@ -77,7 +79,7 @@
         <div class="label">
           <label class="container"
             >Mora em Belo Horizonte?
-            <input id="morador" type="checkbox" name="morador"/>
+            <input id="morador" type="checkbox" name="morador" />
             <span class="checkmark check"></span>
           </label>
         </div>
@@ -101,62 +103,93 @@
           <small>Este Campo deve ser Preenchido</small>
         </div>
         <div>
-          <textarea class="feedback-input" placeholder="Mensagem" name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+          <textarea
+            class="feedback-input"
+            placeholder="Mensagem"
+            name="mensagem"
+            id="mensagem"
+            cols="30"
+            rows="10"
+          ></textarea>
           <small>A Mensagem não pode estar Vazia</small>
         </div>
-            <button type="button" id="verifica" onclick="verifica()" class="button blue rounded button-full-width no-bg">VERIFICAR</button>
+        <button
+          type="button"
+          id="verifica"
+          onclick="verifica()"
+          class="button blue rounded button-full-width no-bg"
+        >
+          VERIFICAR
+        </button>
       </form>
     </div>
-    <div id="dados" class="section shadow dados hide">
-      <h1>Dados</h1>
-      <div class="row">
-        <div class="column">
-          <h3>Nome</h3>
-          <p id="nome-dado"></p>
-        </div>
-        <div class="column">
-          <h3>Email</h3>
-          <p id="email-dado"></p>
-        </div>
-        <div class="column">
-          <h3>Mora em Belo Horizonte?</h3>
-          <p id="mora-dado"></p>
-        </div>
-        <div class="column">
-          <h3>Gênero</h3>
-          <p id="genero-dado"></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column">
-          <h3>Mensagem</h3>
-          <p id="mensagem-dado"></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column-33">
-          <input
-            id="limpar"
-            type="button"
-            value="LIMPAR"
-            class="button rounded button-full-width"
-          />
-        </div>
-        <div class="column-33">
-          <input
-            id="editar"
-            type="button"
-            value="EDITAR"
-            class="button rounded button-full-width no-bg blue"
-          />
-        </div>
-        <div class="column-33">
-          <input
-            id="enviar"
-            type="button"
-            value="ENVIAR"
-            class="button rounded button-full-width"
-          />
+    <div id="myModal" class="modal fade text-center">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              id="closf"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+            >
+              x
+            </button>
+            <h4 class="modal-title">Dados</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="column">
+                <h3>Nome</h3>
+                <p id="nome-dado"></p>
+              </div>
+              <div class="column">
+                <h3>Email</h3>
+                <p id="email-dado"></p>
+              </div>
+              <div class="column">
+                <h3>Mora em Belo Horizonte?</h3>
+                <p id="mora-dado"></p>
+              </div>
+              <div class="column">
+                <h3>Gênero</h3>
+                <p id="genero-dado"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column">
+                <h3>Mensagem</h3>
+                <p id="mensagem-dado"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-33">
+                <input
+                  id="limpar"
+                  type="button"
+                  value="LIMPAR"
+                  class="button rounded button-full-width"
+                />
+              </div>
+              <div class="column-33">
+                <input
+                  id="editar"
+                  type="button"
+                  value="EDITAR"
+                  class="button rounded button-full-width no-bg blue"
+                />
+              </div>
+              <div class="column-33">
+                <input
+                  id="enviar"
+                  type="button"
+                  value="ENVIAR"
+                  class="button rounded button-full-width"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -211,5 +244,7 @@
       </div>
     </footer>
     <script src="assets/js/verifica.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
   </body>
 </html>
